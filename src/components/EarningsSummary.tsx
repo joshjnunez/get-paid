@@ -11,12 +11,11 @@ import {
 
 interface EarningsSummaryProps {
   points: number;
-  topTierMultiplier: number;
 }
 
-export function EarningsSummary({ points, topTierMultiplier }: EarningsSummaryProps) {
-  const commission = calculateCommission(points, topTierMultiplier);
-  const grossPay = calculateGrossPay(points, topTierMultiplier);
+export function EarningsSummary({ points }: EarningsSummaryProps) {
+  const commission = calculateCommission(points);
+  const grossPay = calculateGrossPay(points);
   const attainment = calculateAttainmentPercent(points);
   const remaining = calculatePointsRemaining(points);
 

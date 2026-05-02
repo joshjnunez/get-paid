@@ -12,7 +12,6 @@ function getDefaultMonthLabel(): string {
 function App() {
   const [points, setPoints] = useLocalStorage<number>('gp_points', 0)
   const [monthLabel, setMonthLabel] = useLocalStorage<string>('gp_month', getDefaultMonthLabel())
-  const [topTierMultiplier] = useLocalStorage<number>('gp_multiplier', 3)
 
   return (
     <div className="min-h-screen bg-slate-50 pb-10">
@@ -20,7 +19,7 @@ function App() {
         <Header monthLabel={monthLabel} onMonthLabelChange={setMonthLabel} />
 
         <div className="px-4 space-y-4">
-          <EarningsSummary points={points} topTierMultiplier={topTierMultiplier} />
+          <EarningsSummary points={points} />
           <ProgressTier points={points} />
           <PointTracker points={points} onPointsChange={setPoints} />
         </div>
