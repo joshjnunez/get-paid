@@ -44,7 +44,7 @@ export function ProgressTier({ points }: ProgressTierProps) {
         <div className="absolute top-0 left-0 h-4 rounded-full transition-all duration-500 ease-out"
           style={{
             width: `${fillPct}%`,
-            background: points <= 30
+            background: points <= 35
               ? 'linear-gradient(90deg, #3b82f6, #60a5fa)'
               : 'linear-gradient(90deg, #3b82f6, #10b981)',
           }}
@@ -55,8 +55,8 @@ export function ProgressTier({ points }: ProgressTierProps) {
 
       {/* Labels under bar */}
       <div className="flex text-[10px] text-gray-400 font-medium mb-4">
-        <div style={{ width: `${quotaPct}%` }} className="text-center">0–30</div>
-        <div style={{ width: `${overQuotaPct}%` }} className="text-center">30+</div>
+        <div style={{ width: `${quotaPct}%` }} className="text-center">0–35</div>
+        <div style={{ width: `${overQuotaPct}%` }} className="text-center">35+</div>
       </div>
 
       {/* Status text */}

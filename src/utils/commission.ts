@@ -1,12 +1,12 @@
 // Commission calculation utility functions
-// Based on comp plan: base $72k, OTE $102k, variable $30k/yr, $2500/mo target, 30pt quota
-// New logic: points 0-30 are $83.33 each, points 30+ are $100 flat per point
+// Based on comp plan: base $72k, OTE $102k, variable $30k/yr, $2500/mo target, 35pt quota
+// New logic: points 0-35 are $71.43 each, points 35+ are $100 flat per point
 
-const BASE_POINT_VALUE = 2500 / 30; // ~83.3333333333
+const BASE_POINT_VALUE = 2500 / 35; // ~71.4285714286
 const OVER_QUOTA_POINT_VALUE = 100; // $100 flat per point over quota
 const MONTHLY_BASE_GROSS = 6000;
 const MONTHLY_VARIABLE_TARGET = 2500;
-const MONTHLY_QUOTA_POINTS = 30;
+const MONTHLY_QUOTA_POINTS = 35;
 
 export const CONSTANTS = {
   BASE_POINT_VALUE,

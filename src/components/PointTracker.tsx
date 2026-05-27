@@ -15,7 +15,7 @@ export function PointTracker({ points, onPointsChange }: PointTrackerProps) {
   const prevPointsRef = useRef(points);
 
   useEffect(() => {
-    if (points >= 30 && prevPointsRef.current < 30) {
+    if (points >= 35 && prevPointsRef.current < 35) {
       setCelebrating(true);
       setTimeout(() => setCelebrating(false), 600);
     }
